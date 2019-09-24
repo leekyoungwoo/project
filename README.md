@@ -1,6 +1,6 @@
+'''
 project
 |-- api                               # API 개발 디렉터리 (backend)
-|   |-- coverage                      # code coverage (*)
 |   |-- src
 |   |   |-- apis                      # 각 api 소스
 |   |   |-- console_util
@@ -13,4 +13,4 @@ project
 |   |-- requirement.txt               # python 의존성 정보 파일
 |   `-- start.bat                     # python 가상 환경 시작
 `-- README.md          
-
+'''
