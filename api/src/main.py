@@ -1,5 +1,5 @@
-# import importlib
-# import inspect
+import importlib
+import inspect
 import logging
 import os
 # import re
@@ -35,17 +35,17 @@ api = Api(app)
 #     app,
 #     config=app.config['SWAGGER_CONFIG'])
 
-# importlib.import_module('apis')
-# # apis 모듈 동적 add_resource
-# for module in list(m for m in sys.modules.keys() if m.find('apis.') == 0):
-#     for api_name, obj in inspect.getmembers(sys.modules[module]):
-#         if inspect.isclass(obj) and 'apis' in obj.__module__ and obj.__module__ == module:
-#             if hasattr(obj, 'MAIN_CLASS') and obj.MAIN_CLASS:
-#                 api.add_resource(obj, '/api/v1/{}'.format(obj.__name__), endpoint=obj.__name__)
-#             else:
-#                 url = '/api/v1/{}/{}'.format(str_to_camelcase(obj.__module__.split('.')[-1], True),
-#                                              obj.__name__)
-#                 api.add_resource(obj, url, endpoint=url)
+importlib.import_module('apis')
+# apis 모듈 동적 add_resource
+for module in list(m for m in sys.modules.keys() if m.find('apis.') == 0):
+    for api_name, obj in inspect.getmembers(sys.modules[module]):
+        if inspect.isclass(obj) and 'apis' in obj.__module__ and obj.__module__ == module:
+            if hasattr(obj, 'MAIN_CLASS') and obj.MAIN_CLASS:
+                api.add_resource(obj, '/api/v1/{}'.format(obj.__name__), endpoint=obj.__name__)
+            else:
+                url = '/api/v1/{}/{}'.format(str_to_camelcase(obj.__module__.split('.')[-1], True),
+                                             obj.__name__)
+                api.add_resource(obj, url, endpoint=url)
 #
 # importlib.import_module('exec')
 # # exec 모듈 동적 add_resource

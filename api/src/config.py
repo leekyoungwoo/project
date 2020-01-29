@@ -16,7 +16,7 @@ class Config:
     DB_PORT = '5432'
 
     HOST = '0.0.0.0'
-    PORT = 5001
+    PORT = 10000
 
     CVE_ROOT_DIR = '/SolidStep-CVE/api/src'
     # FILE_ROOT_DIR = '/GOPEN/fdata'

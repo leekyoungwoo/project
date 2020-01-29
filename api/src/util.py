@@ -14,7 +14,6 @@ from functools import wraps
 
 import pytz
 from flask import Response, request, current_app, g, send_file
-from flask_babel import gettext
 from flask_restful import abort
 from inflection import camelize, underscore
 from simplejson import dumps as json_dumps
