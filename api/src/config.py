@@ -6,7 +6,7 @@ class Config:
 
     # SECRET_KEY = 'asldkhaslkfhalhf@ O@#TRNO@!#NTRONI O@#TRIN#OITN'
     # SECURITY_PASSWORD_SALT = 'ssrinc!123qpxkepah!123'
-    DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
+    # DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 
     # DB config
     DB_NAME = 'notedb'
@@ -44,10 +44,10 @@ class Config:
     # }
 
     # 기본 업로드 허용 크기 10MB
-    MAX_CONTENT_LENGTH = 1024 * 1024 * 10
+    # MAX_CONTENT_LENGTH = 1024 * 1024 * 10
 
-    BLOCK_IP_LIST = ['211.249.40.2']
-    BLOCK_AGENT_LIST = ['carbon']
+    # BLOCK_IP_LIST = ['211.249.40.2']
+    # BLOCK_AGENT_LIST = ['carbon']
 
 
 class DevelopmentConfig(Config):
@@ -67,7 +67,7 @@ class ProductionConfig(Config):
     DEBUG = False
     SESSION_COOKIE_SECURE = True
     PRINT_SQL = False
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     LOG_FILE_PATH = '/var/log/sscve/api.log'
 
 

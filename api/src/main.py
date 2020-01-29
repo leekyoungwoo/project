@@ -15,6 +15,7 @@ from flask_restful import Api
 from config import CONFIG
 # from db import init_query_dict
 # from util import str_to_camelcase
+from util import str_to_camelcase
 
 app = Flask(__name__)
 # init_query_dict()
